@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electronics - Shopalix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+      <a href="home.html"><img src="images/logo.png" alt="Shopalix Logo" class="navbar-logo"></a>
+    <a href="home.html">Home</a>
+    <a href="products.html">All Products</a>
+  </nav>
+
+  <button onclick="toggleDarkMode()" style="position: fixed; top: 1rem; right: 1rem;">🌓 Toggle Dark Mode</button>
+
+  <main>
+    <h2 class="section-title">Electronics</h2>
+    <section class="grid">
+      <div class="card">
+        <img src="images/product-iphone.jpg" alt="iPhone 15">
+        <h3>iPhone 15</h3>
+        <p>$999</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/product-laptop.jpg" alt="ASUS Zenbook">
+        <h3>ASUS Zenbook</h3>
+        <p>$850</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/product-smartwatch.jpg" alt="Fitbit Smartwatch">
+        <h3>Fitbit Smartwatch</h3>
+        <p>$199</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelectorAll('.card').forEach(el => el.classList.toggle('dark-card'));
+    }
+  </script>
+</body>
+</html>

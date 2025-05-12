@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Shopalix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+      <a href="home.html"><img src="images/logo.png" alt="Shopalix Logo" class="navbar-logo"></a>
+    <a href="home.html">Home</a>
+  </nav>
+
+  <button onclick="toggleDarkMode()" style="position: fixed; top: 1rem; right: 1rem;">🌓 Toggle Dark Mode</button>
+
+  <main>
+    <h2 class="section-title">Admin Dashboard</h2>
+
+    <div class="card">
+      <h3>Manage Products</h3>
+      <button>Edit</button>
+    </div>
+
+    <div class="card">
+      <h3>View Orders</h3>
+      <p>Order #12345 - Delivered</p>
+      <p>Order #12346 - In Progress</p>
+    </div>
+  </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelectorAll('.card').forEach(el => el.classList.toggle('dark-card'));
+    }
+  </script>
+</body>
+</html>
